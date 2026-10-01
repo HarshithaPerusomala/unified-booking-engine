@@ -1,0 +1,155 @@
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.printBtn {
+  padding: 0.6rem 1.25rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.printBtn:hover {
+  background: var(--accent-hover);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.receipt {
+  background: white;
+  color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.receiptHeader {
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.receiptHeader h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.receiptHeader p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.receiptMeta {
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.row span {
+  color: #666;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.section ul {
+  list-style: none;
+}
+
+.section li {
+  padding: 0.35rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section li strong {
+  min-width: 140px;
+  color: #555;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  border-top: 2px solid #1a1a1a;
+  font-size: 1.15rem;
+}
+
+.total strong {
+  font-size: 1.35rem;
+}
+
+.receiptFooter {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.receiptFooter p {
+  margin-bottom: 0.25rem;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .actions,
+  .nav,
+  .header,
+  .logoutBtn,
+  .user,
+  .main .actions a[href*="/bookings"] {
+    display: none !important;
+  }
+  .receipt {
+    box-shadow: none;
+    padding: 0;
+  }
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+}
