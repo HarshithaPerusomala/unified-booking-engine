@@ -7,7 +7,7 @@
     "dev": "node --watch server.js",
     "migrate": "node scripts/migrate.js",
     "pretest": "cross-env NODE_ENV=test JWT_SECRET=test-secret DATABASE_URL=postgres://bookflow:bookflow@localhost:5432/bookflow_test node scripts/migrate.js",
-    "test": "cross-env NODE_ENV=test JWT_SECRET=test-secret DATABASE_URL=postgres://bookflow:bookflow@localhost:5432/bookflow_test node --test \"tests/**/*.test.js\""
+    "test": "cross-env NODE_ENV=test JWT_SECRET=test-secret DATABASE_URL=postgres://bookflow:bookflow@localhost:5432/bookflow_test node --test --test-concurrency=1 \"tests/**/*.test.js\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -25,3 +25,4 @@
     "supertest": "^7.0.0"
   }
 }
+
