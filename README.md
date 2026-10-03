@@ -1,5 +1,5 @@
 # BookFlow – Ticket Booking App
-
+![CI](https://github.com/HarshithaPerusomala/unified-booking-engine/actions/workflows/ci.yml/badge.svg)
 > **Live demo:** _add your Vercel link here_ · **API:** _add your Render link here_
 
 A full-stack ticket booking app where you can book **movies**, **hotels**, and **travel** (flights, trains, buses) in one place, with login, an admin panel, hotel reviews, and payment receipt generation.
